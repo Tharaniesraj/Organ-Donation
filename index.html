@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Organisation</title>
+</head>
+<body bgcolor="#f2fefc" text="#000000">
+
+  <center>
+    <font size="6" color="#2e8b57"><b>Organ Donor Registration Form</b></font>
+    <hr color="#2e8b57" width="60%">
+  </center>
+
+  <form action="submit_form.php" method="POST">
+    <table cellpadding="10" align="center" bgcolor="#ffffff" border="0">
+
+      <!-- Personal Details -->
+      <tr>
+        <td><font color="#000080">Full Name:</font></td>
+        <td><input type="text" name="name" required></td>
+      </tr>
+
+      <tr>
+        <td><font color="#000080">Age:</font></td>
+        <td><input type="number" name="age" min="18" required></td>
+      </tr>
+
+      <tr>
+        <td><font color="#000080">Gender:</font></td>
+        <td>
+          <input type="radio" name="gender" value="Male" required> Male
+          <input type="radio" name="gender" value="Female"> Female
+          <input type="radio" name="gender" value="Other"> Other
+        </td>
+      </tr>
+
+      <tr>
+        <td><font color="#000080">Blood Group:</font></td>
+        <td>
+          <select name="blood">
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Health Information -->
+      <tr>
+        <td><font color="#000080">Weight (kg):</font></td>
+        <td><input type="number" name="weight" min="30" required></td>
+      </tr>
+
+      <tr>
+        <td><font color="#000080">Do you have any chronic illnesses?</font></td>
+        <td>
+          <input type="radio" name="illness" value="Yes"> Yes
+          <input type="radio" name="illness" value="No"> No
+        </td>
+      </tr>
+
+      <tr>
+        <td><font color="#000080">Current Medications:</font></td>
+        <td><textarea name="medications" rows="3" cols="30" placeholder="List any ongoing medications..."></textarea></td>
+      </tr>
+
+      <tr>
+        <td><font color="#000080">Have you had any major surgeries?</font></td>
+        <td><textarea name="surgeries" rows="3" cols="30" placeholder="Describe if applicable..."></textarea></td>
+      </tr>
+
+      <!-- Organ Selection -->
+      <tr>
+        <td><font color="#000080">Organs to Donate:</font></td>
+        <td>
+          <input type="checkbox" name="organs[]" value="Kidney"> Kidney
+          <details>
+            <summary>Click for Kidney Status</summary>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Current Demand:</strong> High</p>
+            <p><strong>Match Rate:</strong> 85%</p>
+          </details>
+          <br>
+          <input type="checkbox" name="organs[]" value="Liver"> Liver
+          <details>
+            <summary>Click for Liver Status</summary>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Current Demand:</strong> Very High</p>
+            <p><strong>Match Rate:</strong> 78%</p>
+          </details>
+          <br>
+          <input type="checkbox" name="organs[]" value="Heart"> Heart
+          <details>
+            <summary>Click for Heart Status</summary>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Current Demand:</strong> Critical</p>
+            <p><strong>Match Rate:</strong> 65%</p>
+          </details>
+          <br>
+          <input type="checkbox" name="organs[]" value="Lungs"> Lungs
+          <details>
+            <summary>Click for Lungs Status</summary>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Current Demand:</strong> High</p>
+            <p><strong>Match Rate:</strong> 72%</p>
+          </details>
+          <br>
+          <input type="checkbox" name="organs[]" value="Eyes"> Eyes
+          <details>
+            <summary>Click for Eyes Status</summary>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Current Demand:</strong> Moderate</p>
+            <p><strong>Match Rate:</strong> 90%</p>
+          </details>
+          <br>
+          <input type="checkbox" name="organs[]" value="Skin"> Skin
+          <details>
+            <summary>Click for Skin Status</summary>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Current Demand:</strong> Medium</p>
+            <p><strong>Match Rate:</strong> 88%</p>
+          </details>
+        </td>
+      </tr>
+
+      <!-- Contact Info -->
+      <tr>
+        <td><font color="#000080">Email:</font></td>
+        <td><input type="email" name="email"></td>
+      </tr>
+
+      <tr>
+        <td><font color="#000080">Phone:</font></td>
+        <td><input type="tel" name="phone" pattern="[0-9]{10}" required></td>
+      </tr>
+
+      <!-- Center Selection -->
+      <tr>
+        <td><font color="#000080">Select Nearest Donation Center:</font></td>
+        <td>
+          <select name="center">
+            <option value="">--Select Center--</option>
+            <option value="Chennai">Apollo Hospital, Salem</option>
+            <option value="Mumbai">RK Hospital,Mettur</option>
+            <option value="Delhi">Kutty Hospital,Salem</option>
+            <option value="Bangalore">Manipal Hospital, Namakal</option>
+            <option value="Hyderabad">MN Hospital, Erode</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Submit -->
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Register" style="padding:10px">
+          <input type="reset" value="Clear" style="padding:10px">
+        </td>
+      </tr>
+
+    </table>
+  </form>
+
+  <br><br>
+  <center><font color="#2e8b57"><b>Your decision can save lives...</b></font></center>
+
+</body>
+</html>
